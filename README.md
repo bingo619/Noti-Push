@@ -8,7 +8,7 @@ iOS端到端苹果APN推送插件，完美解决微信双开/多开无后台推�
 ## 发送端
 ![pusher](./pusher.png)
 
-- 发送端需要准备pfx证书，下载苹果的apn推送证书.cer, Keychain导出为p12格式，然后通过以下命令转换
+- 发送端需要准备pfx证书，下载苹果的apn推送证书.cer ([创建apn证书教程](https://help.aliyun.com/document_detail/434701.html)), Keychain导出为p12格式，然后通过以下命令转换
 ```bash
 #convert p12 to pem 
 openssl pkcs12 -in aps_push.p12 -out apns-cert.pem -nodes -clcerts
@@ -18,7 +18,7 @@ openssl pkcs12 -in aps_push.p12 -out apns-cert.pem -nodes -clcerts
 #convert to pfx
 openssl pkcs12 -export -out aps_push.pfx -in apns-cert.pem    
 ```
-- 不要设置密码，转换完成后通过icloud传到ipad
+- 不要设置密码，转换完成后通过icloud把pfxw文件传到ipad
 - 发送端需要配合锤子助手/微信助手的永驻后台使用，杀后台后不推送
 
 
