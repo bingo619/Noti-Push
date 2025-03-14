@@ -1,0 +1,9 @@
+Package: com.hong.noti
+Name: noti
+Version: 1.1
+Architecture: iphoneos-arm
+Description: An awesome MobileSubstrate tweak!
+Maintainer: Hongbin Liu
+Author: Hongbin Liu
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
